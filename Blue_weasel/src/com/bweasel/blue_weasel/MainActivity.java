@@ -14,9 +14,11 @@ import android.support.v4.view.ViewPager;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
 
@@ -32,6 +34,18 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
      * The {@link ViewPager} that will host the section contents.
      */
     ViewPager mViewPager;
+    
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.menu_settings:
+            	Toast.makeText(getApplicationContext(), "I don't blame you...", Toast.LENGTH_SHORT).show();
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -80,6 +94,8 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     
 
     public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
+    	
+    	
     }
 
     public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
