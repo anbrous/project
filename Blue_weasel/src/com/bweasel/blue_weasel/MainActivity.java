@@ -1,7 +1,7 @@
 package com.bweasel.blue_weasel;
 
 /**
- * @author Andréi Broussillon, Bastien Carré, Boris Leng, Lyvia Louisius 
+ * @author Andrei Broussillon, Bastien Carre, Boris Leng, Lyvia Louisius 
  */
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
