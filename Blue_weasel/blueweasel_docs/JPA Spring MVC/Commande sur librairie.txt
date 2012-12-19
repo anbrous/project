@@ -1,0 +1,24 @@
+Ouvrir une commande:
+
+- Aller sur la librairie de notre projet:
+
+C:\Users\esigetel\workspace\Blue_Weasel_Server\WebContent\WEB-INF\lib
+
+- Lance le serveur:
+
+java -classpath com.springsource.org.hsqldb-1.8.0.9.jar org.hsqldb.Server
+
+
+
+
+Ouvrir une autre commande:
+
+- Aller sur la librairie de notre projet:
+
+C:\Users\esigetel\workspace\Blue_Weasel_Server\WebContent\WEB-INF\lib
+
+- Lance l'interface de gestion:
+
+java -classpath com.springsource.org.hsqldb-1.8.0.9.jar org.hsqldb.util.DatabaseManagerSwing
+
+
