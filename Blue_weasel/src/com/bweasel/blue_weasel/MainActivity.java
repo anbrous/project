@@ -43,6 +43,7 @@ public class MainActivity extends Activity{
     	startActivity(intent);
     }
     
+    /** Exits the application when clicking on the "Exit" button in the menu bar. */
     public void exit (MenuItem item) {
     	finish();
     }

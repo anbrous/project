@@ -30,6 +30,7 @@ public class DisplayMessageActivity extends Activity {
 		setContentView(textView);
 	}
 	
+	/** Enables the user to go back to the previous activity by pressing the "back" arrow. */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
