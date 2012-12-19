@@ -2,5 +2,6 @@
     <item android:id="@+id/menu_settings"
         android:title="@string/menu_settings"
         android:orderInCategory="100"
+        android:onClick="exit"
         android:showAsAction="ifRoom" android:enabled="true" android:visible="true" android:checked="true"/>
 </menu>

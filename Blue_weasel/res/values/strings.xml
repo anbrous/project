@@ -1,11 +1,8 @@
 <resources>
-
     <string name="app_name">Blue Weasel</string>
-    <string name="title_section3">Games</string>
-    <string name="title_section2">Videos</string>
-    <string name="title_section1">Music</string>
-    <string name="hello_world">Howdy Ho !</string>
+    <string name="title_activity_display_message">My Message</string>
     <string name="menu_settings">Exit</string>
     <string name="title_activity_main">Blue Weasel</string>
-
+    <string name="edit_message">Enter a message</string>
+    <string name="button_send">Send</string>
 </resources>
