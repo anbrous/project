@@ -22,3 +22,5 @@ C:\Users\esigetel\workspace\Blue_Weasel_Server\WebContent\WEB-INF\lib
 java -classpath com.springsource.org.hsqldb-1.8.0.9.jar org.hsqldb.util.DatabaseManagerSwing
 
 
+Pour éviter de tout taper à la main, on peut lancer le launch_bddserver et c'est magique.
+ Il faut juste ne pas oublier de modifier le fichier en fonction de l'emplacement de la librairie de notre projet
