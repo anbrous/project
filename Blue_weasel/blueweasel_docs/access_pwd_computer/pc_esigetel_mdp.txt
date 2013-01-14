@@ -1,0 +1,13 @@
+poste 1:
+	GH-411-01\esigetel
+	pass: esigeteldasicloud
+	
+	GH-411-01\AdmiG
+	pass: Esigetel_2012
+	
+poste 2:
+	GH-411-02\esigetel
+	pass: esigeteldasicloud
+	
+	GH-411-02\AdminG
+	pass: Esigetel_2012
