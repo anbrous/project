@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="HandlerLeak">
+        <ignore path="src\com\bweasel\blue_weasel\ExitActivity.java" />
+        <ignore path="src\com\bweasel\blue_weasel\SplashScreenActivity.java" />
+    </issue>
+</lint>

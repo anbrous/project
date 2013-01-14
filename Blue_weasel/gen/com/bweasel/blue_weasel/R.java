@@ -15,11 +15,11 @@ public final class R {
         public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
-        public static final int create_account=0x7f070003;
-        public static final int email_address=0x7f070000;
-        public static final int password=0x7f070001;
-        public static final int sign_in=0x7f070002;
-        public static final int splash_screen_text=0x7f070004;
+        public static final int create_account=0x7f060003;
+        public static final int email_address=0x7f060000;
+        public static final int password=0x7f060001;
+        public static final int sign_in=0x7f060002;
+        public static final int splash_screen_text=0x7f060004;
     }
     public static final class layout {
         public static final int activity_exit=0x7f030000;
@@ -53,8 +53,5 @@ public final class R {
         public static final int title_activity_exit=0x7f05000b;
         public static final int title_activity_home=0x7f050004;
         public static final int title_activity_splash_screen=0x7f050003;
-    }
-    public static final class style {
-        public static final int AppTheme=0x7f060000;
     }
 }
