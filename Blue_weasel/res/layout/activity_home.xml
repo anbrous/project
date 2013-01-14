@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:descendantFocusability="beforeDescendants"
+	android:focusableInTouchMode="true" >
+    <EditText
+        android:id="@+id/email_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100sp"
+        android:ems="18"
+        android:inputType="textEmailAddress"
+        android:hint="@string/enter_email_address"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/email_address"
+        android:layout_below="@+id/email_address"
+        android:layout_marginTop="20sp"
+        android:ems="18"
+        android:inputType="textPassword" 
+        android:hint="@string/enter_password">
+    </EditText>
+
+    <Button
+        android:id="@+id/sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        android:text="@string/sign_in_button"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/create_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sign_in"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100sp"
+        android:text="@string/create_account_button"
+        android:textSize="30sp" />
+</RelativeLayout>

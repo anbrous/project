@@ -5,46 +5,45 @@ package com.bweasel.blue_weasel;
  */
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
 
-public class MainActivity extends Activity{
+public class HomeActivity extends Activity{
 
-	/** Sets the key for the message sent to the DisplayMessageActivity	 */
+	/** Sets the key for the User Name sent to the ConnectedActivity
 	public final static String EXTRA_MESSAGE = "com.bweasel.blue_weasel";
+	*/
 
 	/** Creates the layout of the Main Activity using its xml description */
 	@Override
     public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
-	    setContentView(R.layout.activity_main);
+	    setContentView(R.layout.activity_home);
     }
 	
-	/** Creates the menu for the first screen using the xml description of the menu */
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_main, menu);
-        return true;
-    }
+	@Override
+	public void onConfigurationChanged(Configuration newConfig){
+		
+	}
     
     /** 
      * Called when the user clicks the Send button.
      * Sends the text written by the user to another activity.
-     */
-    public void sendMessage (View view) {
-    	
+     
+    public void sendMessage (View view) {	
     	Intent intent = new Intent(this, DisplayMessageActivity.class);
     	EditText editText = (EditText) findViewById(R.id.edit_message);
     	String message = editText.getText().toString();
     	intent.putExtra(EXTRA_MESSAGE, message);
     	startActivity(intent);
     }
-    
-    /** Exits the application when clicking on the "Exit" button in the menu bar. */
-    public void exit (MenuItem item) {
-    	finish();
-    }
+    */
+	
+	/** Goes to the Exit Screen when the back arrow is pressed */
+	public void onBackPressed(){
+	   	 Intent intent = new Intent(HomeActivity.this, ExitActivity.class);
+	   	 startActivity(intent);
+	   	 finish();
+	   	 return;
+	}
 }
