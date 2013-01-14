@@ -15,19 +15,22 @@
         android:theme="@android:style/Theme.Light.NoTitleBar" >
         <activity
             android:name="com.bweasel.blue_weasel.HomeActivity"
-            android:label="@string/title_activity_home">
+            android:label="@string/title_activity_home"
+            android:screenOrientation="landscape">
         </activity>
         <activity
             android:name="com.bweasel.blue_weasel.DisplayMessageActivity"
             android:label="@string/title_activity_connected"
-            android:parentActivityName="com.bweasel.blue_weasel.HomeActivity" >
+            android:parentActivityName="com.bweasel.blue_weasel.HomeActivity" 
+            android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.bweasel.blue_weasel.HomeActivity" />
         </activity>
         <activity
             android:name="com.bweasel.blue_weasel.SplashScreenActivity"
-            android:label="@string/title_activity_splash_screen">
+            android:label="@string/title_activity_splash_screen"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -35,7 +38,8 @@
         </activity>
         <activity
             android:name="com.bweasel.blue_weasel.ExitActivity"
-            android:label="@string/title_activity_exit" >
+            android:label="@string/title_activity_exit"
+            android:screenOrientation="landscape" >
         </activity>
     </application>
 
