@@ -5,8 +5,8 @@ package com.bweasel.blue_weasel;
  */
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Bundle;
+import android.view.View;
 
 public class HomeActivity extends Activity{
 
@@ -20,11 +20,6 @@ public class HomeActivity extends Activity{
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.activity_home);
     }
-	
-	@Override
-	public void onConfigurationChanged(Configuration newConfig){
-		
-	}
     
     /** 
      * Called when the user clicks the Send button.
@@ -39,6 +34,13 @@ public class HomeActivity extends Activity{
     }
     */
 	
+	/** If the "Create an account" button is pressed, launches the CreateAccountActivity. */
+	public void createAccount(View view){
+		Intent intent = new Intent(HomeActivity.this, CreateAccountActivity.class);
+		startActivity (intent);
+		return;
+	}
+
 	/** Goes to the Exit Screen when the back arrow is pressed */
 	public void onBackPressed(){
 	   	 Intent intent = new Intent(HomeActivity.this, ExitActivity.class);

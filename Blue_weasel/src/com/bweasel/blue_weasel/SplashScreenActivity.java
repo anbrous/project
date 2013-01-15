@@ -36,10 +36,9 @@ public class SplashScreenActivity extends Activity {
 	    startHandler.sendMessageDelayed(msg, TIMER);
 	}
 	
-	/** User CAN NOT exit the splash screen activity mouahahahah */
+	/** User CAN NOT exit the splash screen activity mouahahahah (except if he presses "home") */
 	@Override
 	public void onBackPressed() {
+		//do nothing
 	}
-	
-	
 }

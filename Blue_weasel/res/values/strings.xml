@@ -13,5 +13,8 @@
     <string name="create_account_button">Create an account</string>
     <string name="goodbye">Goodbye !</string>
     <string name="title_activity_exit">Exit</string>
+    <string name="title_activity_create_account">CreateAccountActivity</string>
+    <string name="enter_username">Username</string>
+    <string name="enter_password_again">Password again</string>
 
 </resources>
