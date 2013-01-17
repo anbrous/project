@@ -1,4 +1,4 @@
-package com.bweasel.blue_weasel;
+package com.bweasel.activities;
 
 /**
  * @author Andrei Broussillon, Bastien Carre, Boris Leng, Lyvia Louisius 

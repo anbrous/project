@@ -1,4 +1,4 @@
-package com.bweasel.blue_weasel;
+package com.bweasel.activities;
 
 import android.app.Activity;
 import android.content.Intent;

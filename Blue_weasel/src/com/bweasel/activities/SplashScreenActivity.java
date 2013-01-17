@@ -1,4 +1,4 @@
-package com.bweasel.blue_weasel;
+package com.bweasel.activities;
 
 import android.os.Bundle;
 import android.os.Handler;

@@ -1,4 +1,4 @@
-package com.bweasel.blue_weasel;
+package com.bweasel.activities;
 
 import java.util.Random;
 import android.media.MediaPlayer;
