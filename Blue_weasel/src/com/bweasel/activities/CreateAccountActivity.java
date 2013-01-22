@@ -1,6 +1,5 @@
 package com.bweasel.activities;
 
-import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -67,21 +66,46 @@ public class CreateAccountActivity extends Activity {
 						str = new String (result, "UTF-8");
 					}
 				}
-			catch (UnsupportedEncodingException e) {
-	            e.printStackTrace();
-	        }
-	        catch (Exception e) {
-	        }
+			catch (Exception e){
+				e.printStackTrace();
+			}
 	        return str;
 		}
 		
 		@Override
 		protected void onPostExecute (String result){
-			String confirmationMessage;
-			int startIndex = result.lastIndexOf("<body>");
-			int endIndex = result.lastIndexOf("<\body>");
-			confirmationMessage = result.substring(startIndex);
-			Toast.makeText(CreateAccountActivity.this, result, Toast.LENGTH_LONG).show();
+			if(result == null || result == ""){
+				Toast.makeText(CreateAccountActivity.this, "Cannot connect to the server, please check your Wifi connection", Toast.LENGTH_SHORT).show();
+			}
+			else{
+				String confirmationMessage;
+				int startIndex = result.lastIndexOf("<body>");
+				int endIndex = result.lastIndexOf("</body>");
+				confirmationMessage = result.substring(startIndex + 6, endIndex);
+				if (confirmationMessage.contains("created")){
+					Toast.makeText(CreateAccountActivity.this, "Your account has been created", Toast.LENGTH_SHORT).show();
+					finish();
+				}
+				else {
+					if (confirmationMessage.contains("username already used")){
+						Toast.makeText(CreateAccountActivity.this, "This username is already used, please choose another one", Toast.LENGTH_SHORT).show();
+						usernameEdit.setText("");
+					}
+					else if (confirmationMessage.contains("email mistake")){
+						Toast.makeText(CreateAccountActivity.this, "This e-mail address is not correct", Toast.LENGTH_SHORT).show();
+						emailEdit.setText("");
+					}
+					else if (confirmationMessage.contains("email already used")){
+						Toast.makeText(CreateAccountActivity.this, "This e-mail address is already used, please choose another one", Toast.LENGTH_SHORT).show();
+						emailEdit.setText("");
+					}
+					else if (confirmationMessage.contains("password mistake")){
+						Toast.makeText(CreateAccountActivity.this, "The second password doesn't match the first one", Toast.LENGTH_SHORT).show();
+						password1Edit.setText("");
+						password2Edit.setText("");
+					}
+				}	
+			}
 		}
 	}
 	
@@ -91,7 +115,11 @@ public class CreateAccountActivity extends Activity {
 		email = emailEdit.getText().toString();
 		password1 = password1Edit.getText().toString();
 		password2 = password2Edit.getText().toString();
-		if (username != null && email != null && password1 != null && password2 !=null){
+		if (username == null || username.replaceAll(" ", "") == "" || email.replaceAll(" ", "") == "" || email == null
+				|| password1 == null || password1.replaceAll(" ", "") == "" || password2 == null || password2.replaceAll(" ", "") == ""){
+			Toast.makeText(CreateAccountActivity.this, "Some fields of the form are empty, please fill them", Toast.LENGTH_SHORT).show();
+		}
+		else {
 			HashMap<String, String> data = new HashMap<String, String>();
 			data.put("action", "signup");
 			data.put("username", username);

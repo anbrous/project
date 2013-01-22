@@ -2,6 +2,7 @@ package com.bweasel.activities;
 
 import java.util.Random;
 import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -10,7 +11,7 @@ import android.app.Activity;
 public class ExitActivity extends Activity {
 
 	private static final int STOPAPP = 0;
-	private static final long TIMER = 1500;
+	MediaPlayer mp;
 	/** The Handler will enable us to finish the ExitActivity when it receives a certain Message */
 	private Handler exitHandler = new Handler() {
         @Override
@@ -25,7 +26,7 @@ public class ExitActivity extends Activity {
         }
     };
     
-    /**Sends a message to finish the Activity the handler after 1,5 second and plays a sound*/
+    /**Sends a message to finish the Activity to the handler after the sound is finished playing*/
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -74,12 +75,19 @@ public class ExitActivity extends Activity {
 				sound = 0;
 		}
 		if (sound != 0){
-			MediaPlayer mp;
 			mp = MediaPlayer.create(ExitActivity.this, sound);
-			mp.start();
 		}
-		Message msg = new Message();
-	    msg.what = STOPAPP;
-	    exitHandler.sendMessageDelayed(msg, TIMER);
+		else{
+			mp = MediaPlayer.create(ExitActivity.this, R.raw.goodbye);
+		}
+		mp.start();
+		mp.setOnCompletionListener(new OnCompletionListener() {
+			public void onCompletion(MediaPlayer mp) {
+				Message msg = new Message();
+				msg.what = STOPAPP;
+				exitHandler.sendMessage(msg);
+				mp.release();
+			}
+		});
 	}
 }

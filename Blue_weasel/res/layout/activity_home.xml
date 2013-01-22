@@ -35,7 +35,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20sp"
         android:text="@string/sign_in_button"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:onClick="signIn" />
 
     <Button
         android:id="@+id/create_account"
