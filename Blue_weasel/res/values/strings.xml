@@ -15,4 +15,7 @@
     <string name="title_activity_connected">User Connected</string>
     <string name="enter_username">Username</string>
     <string name="enter_password_again">Password again</string>
+    <string name="greetings_text">Greetings Bastien, what do you want to do ?</string>
+    <string name="games_button">See games</string>
+    <string name="history_button">Browse History</string>
 </resources>

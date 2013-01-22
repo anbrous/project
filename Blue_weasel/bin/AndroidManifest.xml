@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bweasel.blue_weasel"
+    package="com.bweasel.activities"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="17" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -14,31 +16,41 @@
         android:label="@string/app_name"
         android:theme="@android:style/Theme.Light.NoTitleBar" >
         <activity
-            android:name="com.bweasel.blue_weasel.HomeActivity"
+            android:name="com.bweasel.activities.HomeActivity"
             android:label="@string/title_activity_home"
-            android:screenOrientation="landscape">
+            android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="com.bweasel.blue_weasel.DisplayMessageActivity"
+            android:name="com.bweasel.activities.ConnectedActivity"
             android:label="@string/title_activity_connected"
-            android:parentActivityName="com.bweasel.blue_weasel.HomeActivity" 
-            android:screenOrientation="landscape">
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.bweasel.activities.DisplayMessageActivity"
+            android:label="@string/title_activity_connected"
+            android:parentActivityName="com.bweasel.activities.HomeActivity"
+            android:screenOrientation="landscape" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.bweasel.blue_weasel.HomeActivity" />
+                android:value="com.bweasel.activities.HomeActivity" />
         </activity>
         <activity
-            android:name="com.bweasel.blue_weasel.SplashScreenActivity"
+            android:name="com.bweasel.activities.SplashScreenActivity"
             android:label="@string/title_activity_splash_screen"
-            android:screenOrientation="landscape">
+            android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.bweasel.blue_weasel.ExitActivity"
+            android:name="com.bweasel.activities.ExitActivity"
             android:label="@string/title_activity_exit"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.bweasel.activities.CreateAccountActivity"
+            android:label="@string/title_activity_create_account"
             android:screenOrientation="landscape" >
         </activity>
     </application>
