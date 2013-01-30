@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">Blue Weasel</string>
     <string name="splash_screen_text">Welcome To Blue Weasel !</string>
     <string name="menu_settings">Settings</string>
@@ -8,14 +9,29 @@
     <string name="enter_email_address">E-mail Address</string>
     <string name="enter_password">Password</string>
     <string name="sign_in_button">Sign In</string>
-    <string name="create_account_button">Create an account</string>
+    <string name="create_account_button">Create An Account</string>
     <string name="goodbye">Goodbye !</string>
     <string name="title_activity_exit">Exit</string>
-    <string name="title_activity_create_account">Create an account</string>
+    <string name="title_activity_create_account">Create An Account</string>
     <string name="title_activity_connected">User Connected</string>
     <string name="enter_username">Username</string>
     <string name="enter_password_again">Password again</string>
     <string name="greetings_text">Greetings Bastien, what do you want to do ?</string>
-    <string name="games_button">See games</string>
+    <string name="games_button">See Games</string>
     <string name="history_button">Browse History</string>
+    <string name="games_played_list_title">Games Played</string>
+    <string name="title_activity_history">HistoryActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_games_list">GamesListActivity</string>
+    <string name="games_list_title">Games</string>
+    <string name="games_awaiting_player_list_title">Awaiting player</string>
+    <string name="games_in_process_list_title">In process</string>
+    <string name="refresh_button">Refresh</string>
+    <string name="title_activity_players_list">PlayersListActivity</string>
+    <string name="players_list_title">Already started</string>
+    <string name="view_game_button">View game</string>
+    <string name="join_game_button">Join</string>
+    <string name="title_distribution_w">distributionW</string>
+    <string name="title_activity_drop">Drop</string>
+
 </resources>

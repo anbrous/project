@@ -78,28 +78,24 @@ public class CreateAccountActivity extends Activity {
 				Toast.makeText(CreateAccountActivity.this, "Cannot connect to the server, please check your Wifi connection", Toast.LENGTH_SHORT).show();
 			}
 			else{
-				String confirmationMessage;
-				int startIndex = result.lastIndexOf("<body>");
-				int endIndex = result.lastIndexOf("</body>");
-				confirmationMessage = result.substring(startIndex + 6, endIndex);
-				if (confirmationMessage.contains("created")){
+				if (result.contains("created")){
 					Toast.makeText(CreateAccountActivity.this, "Your account has been created", Toast.LENGTH_SHORT).show();
 					finish();
 				}
 				else {
-					if (confirmationMessage.contains("username already used")){
+					if (result.contains("username already used")){
 						Toast.makeText(CreateAccountActivity.this, "This username is already used, please choose another one", Toast.LENGTH_SHORT).show();
 						usernameEdit.setText("");
 					}
-					else if (confirmationMessage.contains("email mistake")){
+					else if (result.contains("email mistake")){
 						Toast.makeText(CreateAccountActivity.this, "This e-mail address is not correct", Toast.LENGTH_SHORT).show();
 						emailEdit.setText("");
 					}
-					else if (confirmationMessage.contains("email already used")){
+					else if (result.contains("email already used")){
 						Toast.makeText(CreateAccountActivity.this, "This e-mail address is already used, please choose another one", Toast.LENGTH_SHORT).show();
 						emailEdit.setText("");
 					}
-					else if (confirmationMessage.contains("password mistake")){
+					else if (result.contains("password mistake")){
 						Toast.makeText(CreateAccountActivity.this, "The second password doesn't match the first one", Toast.LENGTH_SHORT).show();
 						password1Edit.setText("");
 						password2Edit.setText("");

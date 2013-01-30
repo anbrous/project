@@ -90,4 +90,10 @@ public class ExitActivity extends Activity {
 			}
 		});
 	}
+	
+	/** User CAN NOT exit the exit screen activity mouahahahah (except if he presses "home") */
+	@Override
+	public void onBackPressed() {
+		//do nothing
+	}
 }
